@@ -1,0 +1,347 @@
+const translations = {
+  en: {
+    appName: "Habesha Health Guide",
+    tagline: "Community Health Education & Decision Support",
+    disclaimer: "This is an educational tool, not medical advice. Always consult a healthcare professional.",
+    nav: {
+      home: "Home",
+      symptomChecker: "Symptom Checker",
+      education: "Health Education",
+      communityGuide: "Community Guide",
+      insights: "Insights",
+      feedback: "Feedback",
+    },
+    home: {
+      hero: "Your Health, Your Language",
+      heroSub: "A multilingual health education and decision-support system designed for Ethiopian communities",
+      features: [
+        { title: "Symptom Checker", desc: "Answer simple questions to understand when to seek care", icon: "Stethoscope" },
+        { title: "Health Education", desc: "Learn about common diseases, prevention, and treatment", icon: "BookOpen" },
+        { title: "Community Guide", desc: "Pregnancy, nutrition, first aid, and hydration basics", icon: "Heart" },
+        { title: "Multilingual", desc: "Available in English, Amharic (አማርኛ), and Afaan Oromo", icon: "Globe" },
+      ],
+      startBtn: "Start Symptom Check",
+      learnBtn: "Explore Health Topics",
+      offlineNote: "Designed for low-resource and offline environments",
+    },
+    symptom: {
+      title: "Symptom Checker",
+      subtitle: "Answer a few questions to get guidance on your symptoms",
+      selectSymptoms: "What symptoms are you experiencing?",
+      duration: "How long have you had these symptoms?",
+      durationOptions: ["Less than 1 day", "1-3 days", "3-7 days", "More than a week"],
+      severity: "How severe are the symptoms?",
+      severityOptions: ["Mild — I can do daily activities", "Moderate — It's affecting my daily life", "Severe — I can barely function"],
+      checkBtn: "Get Guidance",
+      resetBtn: "Start Over",
+      results: "Your Assessment",
+      symptoms: {
+        fever: "Fever / High temperature",
+        cough: "Cough",
+        headache: "Headache",
+        bodyPain: "Body pain / Muscle aches",
+        fatigue: "Fatigue / Tiredness",
+        nausea: "Nausea / Vomiting",
+        diarrhea: "Diarrhea",
+        rash: "Skin rash",
+        breathingDifficulty: "Difficulty breathing",
+        chestPain: "Chest pain",
+        soreThroat: "Sore throat",
+        runnyNose: "Runny / Stuffy nose",
+        abdominalPain: "Abdominal / Stomach pain",
+        dizziness: "Dizziness",
+        lossOfAppetite: "Loss of appetite",
+      },
+      riskLevels: {
+        mild: { label: "Low Risk", color: "green", advice: "Your symptoms suggest a mild condition. Rest, stay hydrated, and monitor your symptoms. If they worsen, consider visiting a clinic." },
+        moderate: { label: "Moderate Risk", color: "amber", advice: "Your symptoms may need professional attention. Consider visiting a health center or clinic within the next 1-2 days." },
+        severe: { label: "High Risk", color: "red", advice: "Your symptoms suggest you should seek medical care as soon as possible. Go to the nearest health facility or hospital." },
+      },
+      possibleConditions: "Possible related conditions (for awareness only):",
+      nextSteps: "Recommended next steps:",
+    },
+    education: {
+      title: "Health Education",
+      subtitle: "Learn about common health conditions and prevention",
+      categories: {
+        disease: "Common Diseases",
+        prevention: "Prevention",
+        first_aid: "First Aid",
+        nutrition: "Nutrition",
+      },
+      readMore: "Learn more",
+    },
+    guide: {
+      title: "Community Health Guide",
+      subtitle: "Essential health knowledge for everyday life",
+      sections: {
+        pregnancy: { title: "Pregnancy Basics", icon: "Baby" },
+        hydration: { title: "Hydration & Water Safety", icon: "Droplets" },
+        firstAid: { title: "Basic First Aid", icon: "Cross" },
+        nutrition: { title: "Nutrition Guide", icon: "Apple" },
+      },
+    },
+    insights: {
+      title: "Community Insights",
+      subtitle: "Anonymous data to understand community health needs",
+      totalChecks: "Total Symptom Checks",
+      topSymptoms: "Most Common Symptoms",
+      languageUsage: "Language Usage",
+      riskDistribution: "Risk Level Distribution",
+      topicsViewed: "Most Viewed Topics",
+    },
+    feedback: {
+      title: "Share Your Feedback",
+      subtitle: "Help us improve this tool for the community",
+      rateExperience: "Rate your experience",
+      selectFeature: "Which feature are you rating?",
+      comment: "Any additional comments?",
+      commentPlaceholder: "Tell us what you think...",
+      submitBtn: "Submit Feedback",
+      thankYou: "Thank you for your feedback!",
+    },
+    languages: {
+      en: "English",
+      am: "አማርኛ (Amharic)",
+      om: "Afaan Oromo",
+    },
+  },
+  am: {
+    appName: "ጤና መሪ ኢትዮጵያ",
+    tagline: "የማህበረሰብ ጤና ትምህርት እና የውሳኔ ድጋፍ",
+    disclaimer: "ይህ የትምህርት መሳሪያ ነው፣ የሕክምና ምክር አይደለም። ሁል ጊዜ የጤና ባለሙያ ያማክሩ።",
+    nav: {
+      home: "መነሻ",
+      symptomChecker: "ምልክት መመርመሪያ",
+      education: "የጤና ትምህርት",
+      communityGuide: "የማህበረሰብ መመሪያ",
+      insights: "ግንዛቤዎች",
+      feedback: "አስተያየት",
+    },
+    home: {
+      hero: "ጤናዎ፣ በቋንቋዎ",
+      heroSub: "ለኢትዮጵያ ማህበረሰቦች የተዘጋጀ ባለብዙ ቋንቋ የጤና ትምህርት እና የውሳኔ ድጋፍ ስርዓት",
+      features: [
+        { title: "ምልክት መመርመሪያ", desc: "መቼ ሕክምና መፈለግ እንዳለብዎ ለመረዳት ቀላል ጥያቄዎችን ይመልሱ", icon: "Stethoscope" },
+        { title: "የጤና ትምህርት", desc: "ስለ ተለመዱ በሽታዎች፣ መከላከያ እና ሕክምና ይማሩ", icon: "BookOpen" },
+        { title: "የማህበረሰብ መመሪያ", desc: "ስለ እርግዝና፣ ስለ ስነ-ምግብ፣ ስለ መጀመሪያ ደረጃ ሕክምና እና ስለ ውሃ ጥቅም", icon: "Heart" },
+        { title: "ባለብዙ ቋንቋ", desc: "በእንግሊዝኛ፣ በአማርኛ እና በአፋን ኦሮሞ ይገኛል", icon: "Globe" },
+      ],
+      startBtn: "ምልክት ምርመራ ይጀምሩ",
+      learnBtn: "የጤና ርዕሶችን ያስሱ",
+      offlineNote: "ለዝቅተኛ ሀብት እና ከመስመር ውጪ አካባቢዎች የተዘጋጀ",
+    },
+    symptom: {
+      title: "ምልክት መመርመሪያ",
+      subtitle: "ስለ ምልክቶችዎ መመሪያ ለማግኘት ጥቂት ጥያቄዎችን ይመልሱ",
+      selectSymptoms: "ምን ምልክቶች እያጋጠሙዎት ነው?",
+      duration: "እነዚህ ምልክቶች ለምን ያህል ጊዜ አለዎት?",
+      durationOptions: ["ከ1 ቀን ያነሰ", "1-3 ቀናት", "3-7 ቀናት", "ከአንድ ሳምንት በላይ"],
+      severity: "ምልክቶቹ ምን ያህል ከባድ ናቸው?",
+      severityOptions: ["ቀላል — የዕለት ተዕለት ሥራዬን መሥራት እችላለሁ", "መካከለኛ — የዕለት ኑሮዬን እየጎዳው ነው", "ከባድ — መንቀሳቀስ ያስቸግረኛል"],
+      checkBtn: "መመሪያ ያግኙ",
+      resetBtn: "እንደገና ይጀምሩ",
+      results: "የእርስዎ ግምገማ",
+      symptoms: {
+        fever: "ትኩሳት / ከፍተኛ ሙቀት",
+        cough: "ሳል",
+        headache: "ራስ ምታት",
+        bodyPain: "የሰውነት ህመም / የጡንቻ ህመም",
+        fatigue: "ድካም / ዝግታ",
+        nausea: "ማቅለሽለሽ / ማስመለስ",
+        diarrhea: "ተቅማጥ",
+        rash: "የቆዳ ሽፍታ",
+        breathingDifficulty: "የመተንፈስ ችግር",
+        chestPain: "የደረት ህመም",
+        soreThroat: "የጉሮሮ ህመም",
+        runnyNose: "የአፍንጫ ፍሳሽ / መዘጋት",
+        abdominalPain: "የሆድ ህመም",
+        dizziness: "ማዞር",
+        lossOfAppetite: "የምግብ ፍላጎት ማጣት",
+      },
+      riskLevels: {
+        mild: { label: "ዝቅተኛ ስጋት", color: "green", advice: "ምልክቶችዎ ቀላል ሁኔታን ያሳያሉ። ያረፉ፣ ውሃ ይጠጡ እና ምልክቶችዎን ይከታተሉ። ከተባባሱ ክሊኒክ ይሂዱ።" },
+        moderate: { label: "መካከለኛ ስጋት", color: "amber", advice: "ምልክቶችዎ ባለሙያ ትኩረት ሊያስፈልጋቸው ይችላል። በ1-2 ቀናት ውስጥ የጤና ማዕከል ወይም ክሊኒክ መጎብኘት ያስቡበት።" },
+        severe: { label: "ከፍተኛ ስጋት", color: "red", advice: "ምልክቶችዎ በተቻለ ፍጥነት ሕክምና መፈለግ እንዳለብዎ ያሳያሉ። ወደ ቅርብ የጤና ተቋም ወይም ሆስፒታል ይሂዱ።" },
+      },
+      possibleConditions: "ሊዛመዱ የሚችሉ ሁኔታዎች (ለግንዛቤ ብቻ):",
+      nextSteps: "የሚመከሩ ቀጣይ እርምጃዎች:",
+    },
+    education: {
+      title: "የጤና ትምህርት",
+      subtitle: "ስለ ተለመዱ የጤና ሁኔታዎች እና መከላከያ ይማሩ",
+      categories: {
+        disease: "ተለመዱ በሽታዎች",
+        prevention: "መከላከያ",
+        first_aid: "የመጀመሪያ ደረጃ ሕክምና",
+        nutrition: "ስነ-ምግብ",
+      },
+      readMore: "ተጨማሪ ይማሩ",
+    },
+    guide: {
+      title: "የማህበረሰብ ጤና መመሪያ",
+      subtitle: "ለዕለት ተዕለት ኑሮ አስፈላጊ የጤና ዕውቀት",
+      sections: {
+        pregnancy: { title: "የእርግዝና መሰረታዊ ነገሮች", icon: "Baby" },
+        hydration: { title: "ውሃ ጥቅም እና ደህንነት", icon: "Droplets" },
+        firstAid: { title: "መሰረታዊ የመጀመሪያ ደረጃ ሕክምና", icon: "Cross" },
+        nutrition: { title: "የስነ-ምግብ መመሪያ", icon: "Apple" },
+      },
+    },
+    insights: {
+      title: "የማህበረሰብ ግንዛቤዎች",
+      subtitle: "የማህበረሰብ ጤና ፍላጎቶችን ለመረዳት ስም-አልባ ውሂብ",
+      totalChecks: "ጠቅላላ ምልክት ምርመራዎች",
+      topSymptoms: "በጣም ተለመዱ ምልክቶች",
+      languageUsage: "የቋንቋ አጠቃቀም",
+      riskDistribution: "የአደጋ ደረጃ ስርጭት",
+      topicsViewed: "በጣም የተመለከቱ ርዕሶች",
+    },
+    feedback: {
+      title: "አስተያየትዎን ያካፍሉ",
+      subtitle: "ይህን መሳሪያ ለማህበረሰቡ ለማሻሻል ያግዙን",
+      rateExperience: "ልምድዎን ይገምግሙ",
+      selectFeature: "የትኛውን ባህሪ እየገመገሙ ነው?",
+      comment: "ተጨማሪ አስተያየት አለዎት?",
+      commentPlaceholder: "ምን እንደሚያስቡ ይንገሩን...",
+      submitBtn: "አስተያየት ያቅርቡ",
+      thankYou: "ለአስተያየትዎ እናመሰግናለን!",
+    },
+    languages: {
+      en: "English",
+      am: "አማርኛ (Amharic)",
+      om: "Afaan Oromo",
+    },
+  },
+  om: {
+    appName: "Qajeelcha Fayyaa Itoophiyaa",
+    tagline: "Barnoota Fayyaa Hawaasaa fi Deeggarsa Murtoo",
+    disclaimer: "Kun meeshaa barnootaati, gorsa yaalaa miti. Yeroo hunda ogeessa fayyaa mariisisaa.",
+    nav: {
+      home: "Fuula Jalqabaa",
+      symptomChecker: "Sakatta'a Mallattoo",
+      education: "Barnoota Fayyaa",
+      communityGuide: "Qajeelcha Hawaasaa",
+      insights: "Hubannoo",
+      feedback: "Yaada",
+    },
+    home: {
+      hero: "Fayyaa Kee, Afaan Keetiin",
+      heroSub: "Sirna barnoota fayyaa fi deeggarsa murtoo afaan hedduun hawaasa Itoophiyaaf qophaa'e",
+      features: [
+        { title: "Sakatta'a Mallattoo", desc: "Gaaffiilee salphaa deebisaa yeroo yaala barbaaddan hubachuuf", icon: "Stethoscope" },
+        { title: "Barnoota Fayyaa", desc: "Waa'ee dhukkuboota beekamoo, ittisa fi yaala baradhaa", icon: "BookOpen" },
+        { title: "Qajeelcha Hawaasaa", desc: "Waa'ee ulfaa, nyaataa, gargaarsa jalqabaa fi bishaan dhugaatii", icon: "Heart" },
+        { title: "Afaan Hedduun", desc: "Afaan Ingiliffaa, Amaariffaa fi Afaan Oromoon ni argama", icon: "Globe" },
+      ],
+      startBtn: "Sakatta'a Mallattoo Jalqabi",
+      learnBtn: "Mata Duree Fayyaa Qoradhu",
+      offlineNote: "Naannoo qabeenya xiqqaa fi toora alaan hojjechuuf kan qophaa'e",
+    },
+    symptom: {
+      title: "Sakatta'a Mallattoo",
+      subtitle: "Gaaffiilee muraasa deebisaa qajeelcha mallattoo keessaniif argachuuf",
+      selectSymptoms: "Mallattoon maaltu isin mudata?",
+      duration: "Mallattoon kun yeroo hangamiif isin mudateera?",
+      durationOptions: ["Guyyaa 1 gadi", "Guyyaa 1-3", "Guyyaa 3-7", "Torbee 1 ol"],
+      severity: "Mallattoon kun hangam cimaa dha?",
+      severityOptions: ["Salphaa — hojii guyyuu hojjechuu nan danda'a", "Giddu galeessa — jireenya guyyuu koo miidheera", "Cimaa — socho'uu na rakkisa"],
+      checkBtn: "Qajeelcha Argadhu",
+      resetBtn: "Irra Deebi'ii Jalqabi",
+      results: "Madaallii Keessan",
+      symptoms: {
+        fever: "Hoo'a / Ho'a qaamaa ol ka'e",
+        cough: "Qufa'a",
+        headache: "Mataa bowwuu / Dhukkubbii mataa",
+        bodyPain: "Dhukkubbii qaamaa / maashaalee",
+        fatigue: "Dadhabuu / Dadhabbii",
+        nausea: "Oldeebisuu / Lolaa",
+        diarrhea: "Garaa kaasaa",
+        rash: "Soorata gogaa",
+        breathingDifficulty: "Rakkoo hafuura baafachuu",
+        chestPain: "Dhukkubbii laphee",
+        soreThroat: "Dhukkubbii qoonqoo",
+        runnyNose: "Funyaan dhangala'uu / Cufamuu",
+        abdominalPain: "Dhukkubbii garaa",
+        dizziness: "Mataa naannessuu",
+        lossOfAppetite: "Fedhii nyaataa dhabuu",
+      },
+      riskLevels: {
+        mild: { label: "Balaa Gadi Aanaa", color: "green", advice: "Mallattoon keessan haala salphaa agarsiisa. Boqodhaa, bishaan dhugaa, mallattoo keessan hordofaa. Yoo hammaate gara kilinikaa deemaa." },
+        moderate: { label: "Balaa Giddu Galeessaa", color: "amber", advice: "Mallattoon keessan xiyyeeffannaa ogeessaa barbaaduu danda'a. Guyyaa 1-2 keessatti gara buufata fayyaa deemuu yaadaa." },
+        severe: { label: "Balaa Olaanaa", color: "red", advice: "Mallattoon keessan dafnee yaala barbaaduu akka qabdan agarsiisa. Gara dhaabbata fayyaa ykn hospitaala dhiyootti deemaa." },
+      },
+      possibleConditions: "Haalonni walqabatan ta'uu danda'an (hubannoof qofa):",
+      nextSteps: "Tarkaanfiiwwan itti aanaan gorsamaman:",
+    },
+    education: {
+      title: "Barnoota Fayyaa",
+      subtitle: "Waa'ee haala fayyaa beekamoo fi ittisa baradhaa",
+      categories: {
+        disease: "Dhukkuboota Beekamoo",
+        prevention: "Ittisa",
+        first_aid: "Gargaarsa Jalqabaa",
+        nutrition: "Nyaata Madaalamaa",
+      },
+      readMore: "Dabalataan baradhu",
+    },
+    guide: {
+      title: "Qajeelcha Fayyaa Hawaasaa",
+      subtitle: "Beekumsa fayyaa barbaachisaa jireenya guyyuuf",
+      sections: {
+        pregnancy: { title: "Bu'uuraalee Ulfaa", icon: "Baby" },
+        hydration: { title: "Bishaan Dhugaatii fi Nageenyummaa", icon: "Droplets" },
+        firstAid: { title: "Gargaarsa Jalqabaa Bu'uuraa", icon: "Cross" },
+        nutrition: { title: "Qajeelcha Nyaataa", icon: "Apple" },
+      },
+    },
+    insights: {
+      title: "Hubannoo Hawaasaa",
+      subtitle: "Fedhii fayyaa hawaasaa hubachuuf daataa maqaa hin qabneen",
+      totalChecks: "Sakatta'a Mallattoo Waliigalaa",
+      topSymptoms: "Mallattoo Baay'ee Beekamoo",
+      languageUsage: "Itti Fayyadama Afaanii",
+      riskDistribution: "Raabsa Sadarkaa Balaa",
+      topicsViewed: "Mata Duree Baay'ee Ilaalaman",
+    },
+    feedback: {
+      title: "Yaada Keessan Qoodaa",
+      subtitle: "Meeshaa kana hawaasaaf fooyyessuuf nu gargaaraa",
+      rateExperience: "Muuxannoo keessan madaalaa",
+      selectFeature: "Amala kam madaalaa jirtu?",
+      comment: "Yaada dabalataa qabduu?",
+      commentPlaceholder: "Maal akka yaaddan nutti himaa...",
+      submitBtn: "Yaada Ergaa",
+      thankYou: "Yaada keessaniif galatoomaa!",
+    },
+    languages: {
+      en: "English",
+      am: "አማርኛ (Amharic)",
+      om: "Afaan Oromo",
+    },
+  },
+};
+
+export function t(lang, path) {
+  const keys = path.split('.');
+  let result = translations[lang] || translations.en;
+  for (const key of keys) {
+    if (result && typeof result === 'object' && key in result) {
+      result = result[key];
+    } else {
+      // Fallback to English
+      let fallback = translations.en;
+      for (const k of keys) {
+        if (fallback && typeof fallback === 'object' && k in fallback) {
+          fallback = fallback[k];
+        } else {
+          return path;
+        }
+      }
+      return fallback;
+    }
+  }
+  return result;
+}
+
+export default translations;
